@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="./css/chengs.css">
+  <link rel="stylesheet" href="./css/vita.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>chengsSky</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <section class="vita">
+          <h2><i class="fa fa-star" aria-hidden="true"></i> 个人资料</h2>
+          <div class="vita-min">
+            <div class="vita-min-l">
+              <ul>
+                <li>姓名: 程森</li>
+                <li>性别: 男</li>
+                <li>年龄: 22</li>
+                <li>学校: 广东工商大学</li>
+              </ul>
+              <ul>
+                <li>手机: 13686797801</li>
+                <li>微信: cheng--dl</li>
+                <li>邮箱: 1829773818@qq.com</li>
+              </ul>
+            </div>
+            <div class="vita-min-r">
+            </div>
+          </div>
+        </section>
+        <section class="skill">
+          <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> 掌握的技能</h2>
+          <div class="skill-min">
+            <div class="skill-card">
+              <div class="skill-card-i"><i class="fa fa-html5 fa-2x" aria-hidden="true"></i></div>
+              <h4>html 5</h4>
+              <p>熟悉 HTML5 网站的架构和开发</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card-i"><i class="fa fa-css3 fa-2x" aria-hidden="true"></i></div>
+              <h4>css3</h4>
+              <p>熟悉使用 CSS3 写响应式网站、动画等</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card-i"><i class="fa fa-code fa-2x" aria-hidden="true"></i></div>
+              <h4>JavaScript</h4>
+              <p>能使用 JS 制作简单的程序、交互与特效</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card-i"><i class="fa fa-bold fa-2x" aria-hidden="true"></i></div>
+              <h4>bootstrap</h4>
+              <p>熟悉 bootstrap 前端框架，用于构建响应式、移动设备优先的网站</p>
+            </div>
+          </div>
+        </section>
+        <section class="works">
+          <h2><i class="fa fa-trophy" aria-hidden="true"></i> 个人作品</h2>
+          <div class="works-min">
+            <a href="/音频播放器/" class="works-card">
+              <img src="/picture/音乐播放器.png" alt="">
+              <p>音乐播放器</p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+
+  <script>
+    $(".skill .skill-min .skill-card .skill-card-i").mouseover(function () {
+      $(this).find("i").addClass("spin");
+      $(this).find("i").removeClass("spins");
+    })
+    $(".skill .skill-min .skill-card .skill-card-i").mouseout(function () {
+      $(this).find("i").addClass("spins");
+      $(this).find("i").removeClass("spin");
+    })
+  </script>
+</body>
+
+</html>

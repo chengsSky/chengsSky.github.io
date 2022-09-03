@@ -1,0 +1,131 @@
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 0.3s forwards linear;
+}
+@keyframes spins {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.spins {
+  animation: spins 0.3s forwards linear;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/picture/背景.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.vita {
+  padding: 50px;
+  background-color: #f1f1f1;
+}
+.vita h2 {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+}
+.vita .vita-min {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.vita .vita-min .vita-min-l {
+  width: 66.66%;
+  display: flex;
+  justify-content: center;
+}
+.vita .vita-min .vita-min-l ul {
+  width: 50%;
+}
+.vita .vita-min .vita-min-l ul li {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.vita .vita-min .vita-min-r {
+  width: 33.33%;
+}
+.skill {
+  padding: 50px;
+  background-color: #f8bd24;
+}
+.skill h2 {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+}
+.skill .skill-min {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.skill .skill-min .skill-card {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.skill .skill-min .skill-card .skill-card-i {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  box-shadow: 1px 3px 5px 0 #000;
+}
+.skill .skill-min .skill-card h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.skill .skill-min .skill-card p {
+  font-size: 10px;
+}
+.works {
+  padding: 50px;
+  background-color: #0ff;
+}
+.works h2 {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+}
+.works .works-min {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.works .works-min .works-card {
+  width: 45%;
+}
+.works .works-min .works-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.works .works-min .works-card p {
+  text-align: center;
+}
+/*# sourceMappingURL=./vita.css.map */

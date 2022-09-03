@@ -1,0 +1,114 @@
+.box {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #ff00ff, #00ffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .music {
+  width: 300px;
+  height: 500px;
+  background-image: linear-gradient(45deg, #ff00ff, #00ffff);
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 15px;
+}
+.box .music img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.box .music h3 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+.box .music h5 {
+  font-size: 18px;
+}
+.box .music .music-cz {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  height: 50px;
+}
+.box .music .music-cz .music-c {
+  overflow: hidden;
+}
+.box .music label {
+  position: relative;
+  height: 30px;
+  display: block;
+  overflow: hidden;
+}
+.box .music label input {
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.box .music label .jindu {
+  width: 300px;
+  height: 100%;
+  background-color: #0000ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 20px;
+}
+.box .music label .jindu .mask {
+  border-radius: 20px;
+  width: 0%;
+  height: 100%;
+  background-color: #00ffff;
+}
+.box audio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  display: none;
+}
+@keyframes shaun {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.shaun {
+  animation: shaun 5s infinite linear;
+}
+.dsno {
+  display: none !important;
+}
+@keyframes doduong {
+  0% {
+    transform: rotateX(0);
+  }
+  25% {
+    transform: rotateX(-10deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  75% {
+    transform: rotateX(-10deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.doduong {
+  animation: doduong 0.3s 2 linear;
+}
+/*# sourceMappingURL=./music.css.map */
