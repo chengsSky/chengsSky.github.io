@@ -1,0 +1,88 @@
+.tc {
+  width: 1200px;
+  margin: 10px auto;
+  display: flex;
+}
+.tc .tc-s {
+  display: flex;
+}
+.tc .tc-s > div {
+  padding: 0 10px;
+  margin: 0 4px;
+}
+.dq {
+  width: 1200px;
+  margin: 10px auto;
+  display: flex;
+}
+.dq .dq-s {
+  display: flex;
+}
+.dq .dq-s > div {
+  padding: 0 10px;
+  margin: 0 4px;
+}
+.jd {
+  width: 1200px;
+  margin: 10px auto;
+  display: flex;
+}
+.jd .jd-s {
+  display: flex;
+}
+.jd .jd-s > div {
+  padding: 0 10px;
+  margin: 0 4px;
+}
+.sf {
+  width: 1200px;
+  margin: 10px auto;
+  display: flex;
+}
+.sf .sf-s {
+  display: flex;
+}
+.sf .sf-s > div {
+  padding: 0 10px;
+  margin: 0 4px;
+}
+.px {
+  width: 1200px;
+  margin: 10px auto;
+  display: flex;
+}
+.px .px-s {
+  display: flex;
+}
+.px .px-s > div {
+  padding: 0 10px;
+  margin: 0 4px;
+}
+.box {
+  width: 1200px;
+  height: 500px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.box > div {
+  width: 15%;
+  margin: 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.box > div img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box > div .box-p {
+  margin-bottom: 2px;
+}
+.ppp {
+  color: blue;
+}
+/*# sourceMappingURL=./作业.css.map */

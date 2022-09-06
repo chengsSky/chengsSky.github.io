@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日月交替</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-color: rgb(27, 151, 209);
+      overflow: hidden;
+    }
+
+    @keyframes ry {
+      from {
+        top: -200px;
+      }
+
+      to {
+        top: 100px;
+      }
+    }
+
+    .ry {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: rgb(65, 95, 214);
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      animation: ry 2s linear forwards;
+      box-shadow: 0 0 25px 25px rgb(170, 170, 207);
+    }
+
+    @keyframes s1 {
+      from {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+      }
+
+      to {
+        bottom: -250px;
+        left: 200px;
+        width: 500px;
+        height: 500px;
+      }
+    }
+
+    .s1 {
+      background-color: rgb(31, 116, 172);
+      position: absolute;
+      z-index: 9;
+      transform: rotate(45deg);
+      animation: s1 2s linear forwards;
+    }
+
+    @keyframes s2 {
+      from {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+      }
+
+      to {
+        width: 600px;
+        height: 600px;
+        left: -200px;
+        bottom: -300px;
+      }
+    }
+
+    .s2 {
+      position: absolute;
+      background-color: rgb(94, 177, 232);
+      z-index: 8;
+      transform: rotate(45deg);
+      animation: s2 2s linear forwards;
+    }
+
+    @keyframes s3 {
+      from {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+      }
+
+      to {
+        width: 600px;
+        height: 600px;
+        left: 600px;
+        bottom: -300px;
+      }
+    }
+
+    .s3 {
+      position: absolute;
+      background-color: rgb(153, 193, 219);
+      z-index: 7;
+      transform: rotate(45deg);
+      animation: s3 2s linear forwards;
+    }
+
+    @keyframes s4 {
+      from {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+      }
+
+      to {
+        width: 500px;
+        height: 500px;
+        left: 950px;
+        bottom: -300px;
+      }
+    }
+
+    .s4 {
+      position: absolute;
+      background-color: rgb(108, 180, 227);
+      z-index: 6;
+      transform: rotate(45deg);
+      animation: s4 2s linear forwards;
+    }
+
+    @keyframes s5 {
+      from {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+      }
+
+      to {
+        width: 600px;
+        height: 600px;
+        left: 1200px;
+        bottom: -300px;
+      }
+    }
+
+    .s5 {
+      position: absolute;
+      background-color: rgb(1, 69, 114);
+      z-index: 9;
+      transform: rotate(45deg);
+      animation: s5 2s linear forwards;
+    }
+
+    @keyframes s6 {
+      from {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+      }
+
+      to {
+        width: 500px;
+        height: 500px;
+        left: 1800px;
+        bottom: -300px;
+      }
+    }
+
+    .s6 {
+      position: absolute;
+      background-color: rgb(134, 188, 223);
+      z-index: 8;
+      transform: rotate(45deg);
+      animation: s6 2s linear forwards;
+    }
+
+    .bg {
+      background-color: #ffa920;
+    }
+
+    .ry-r {
+      background-color: red;
+      box-shadow: 0 0 25px 25px rgb(243, 113, 32);
+    }
+
+    .s1-r {
+      background-color: #E3CF57;
+    }
+
+    .s2-r {
+      background-color: #FF9912;
+    }
+
+    .s3-r {
+      background-color: #FFE384;
+    }
+
+    .s4-r {
+      background-color: #FFD700;
+    }
+
+    .s5-r {
+      background-color: #FFFFCD;
+    }
+
+    .s6-r {
+      background-color: #FF9912;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 2022年8月23日 -->
+  <div class="box">
+    <div class="ry"></div>
+    <div class="s1"></div>
+    <div class="s2"></div>
+    <div class="s3"></div>
+    <div class="s4"></div>
+    <div class="s5"></div>
+    <div class="s6"></div>
+  </div>
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(".ry").click(function () {
+      $(".box").toggleClass("bg");
+      $(".box div ").eq(0).toggleClass("ry-r").next().toggleClass("s1-r").next()
+        .toggleClass("s2-r").next().toggleClass("s3-r ").next().toggleClass("s4-r").next().toggleClass("s5-r")
+        .next().toggleClass("s6-r ")
+    });
+
+    document.body.onmousemove = function (event) {
+      var x = (event.pageX - window.innerWidth / 2) * (20 / (window.innerWidth / 2)) + 50;
+      var y = (event.pageY - window.innerHeight / 2) * (20 / (window.innerHeight / 2)) + 50;
+      // console.log(x, y);
+      // document.body.style.perspectiveOrigin = x + " " + y;
+      // transform: translateX(50px)
+      $(".box div").eq(0).siblings().css("transform", "translateX(" + x + "px) rotate(45deg)");
+    };
+  </script>
+</body>
+
+</html>

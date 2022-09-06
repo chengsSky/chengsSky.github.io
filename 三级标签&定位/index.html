@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/chengs.css">
+  <title>三级标签&定位</title>
+  <style>
+    ul {
+      width: 100%;
+      padding: 5px 10px;
+    }
+
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      width: 15%;
+    }
+
+
+    .box ul {
+      position: relative;
+    }
+
+    .box ul>li {
+      position: absolute;
+      width: 100%;
+      left: 110%;
+      padding: 5px 10px;
+    }
+
+    .box ul>li>li {
+      position: absolute;
+      width: 100%;
+      left: 110%;
+      padding: 5px 10px;
+    }
+
+    .active {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    var tops = 0;
+    var topsl = 0;
+    $.get("./prov-county.json", function (res) {
+      res.forEach(function (e) {
+        var arr = e.split(':');
+        if (arr[0].length == 2) {
+          $(".box").append("<ul data-id=" + arr[0] + "> " + arr[1] + "</ul>");
+        }
+      });
+      $(".box ul").click(function (p) {
+        var idEl = $(this).data("id");
+        var _this = $(this)[0];
+        $(".box").find("li").remove();
+        res.forEach(function (e) {
+          var arr = e.split(':');
+          if (arr[0].length == 4) {
+            var shortName = arr[0].substring(0, 2);
+            if (shortName == idEl) {
+              console.log(arr[1]);
+              var lis = $('<li data-id=' + arr[0] + ' style="top:' + tops + 'px">' + arr[1] + '</li>');
+              $(_this).append(lis);
+              tops += 30;
+              p.stopPropagation();
+            }
+          }
+        });
+        tops = 0;
+        $(this).addClass("active").siblings().removeClass("active");
+
+
+        $(".box ul li").click(function (p) {
+          var liEl = $(this).data("id");
+          var _thisl = $(this)[0];
+          $(".box ul li").find("li").remove();
+          res.forEach(function (e) {
+            var arr = e.split(':');
+            if (arr[0].length == 6) {
+              var shortName = arr[0].substring(0, 4);
+              if (shortName == liEl) {
+                console.log(arr[1]);
+                var lisl = $('<li data-id=' + arr[0] + ' style="top:' + topsl + 'px">' + arr[1] +
+                  '</li>');
+                $(_thisl).append(lisl);
+                topsl += 30;
+                p.stopPropagation();
+              }
+            }
+          });
+          topsl = 0;
+          $(this).addClass("active").siblings().removeClass("active");
+
+          $(".box ul li li").click(function (za) {
+            $(this).addClass("active").siblings().removeClass("active");
+            za.stopPropagation();
+          })
+
+        });
+      });
+
+    });
+  </script>
+</body>
+
+</html>

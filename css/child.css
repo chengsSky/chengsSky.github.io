@@ -1,0 +1,578 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+/* 清除浮动 */
+.clear::after {
+  /* 先设置一个选择器 给一个伪元素 ::after (在元素结束前加一个元素) */
+  content: "";
+  /* 设置内容为空 */
+  display: block;
+  /* 转换为块级元素 */
+  clear: both;
+  /* 清除左右的浮动 */
+}
+/* 设置完成在需要的地方直接插入 clear 即可完成清浮 */
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.top {
+  background-color: #b1b1b1;
+  padding: 20px 0;
+}
+.top .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.top .wrap a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.top .wrap a h1 {
+  font-size: 28px;
+  color: white;
+}
+.top .wrap a h1 samp {
+  color: coral;
+}
+.top .wrap a:hover {
+  color: coral;
+}
+.top .wrap .top-r .top-r1 {
+  margin-right: 30px;
+}
+.top .wrap .top-r .top-r1 i {
+  float: left;
+  color: gold;
+  margin-right: 15px;
+}
+.top .wrap .top-r .top-r1 samp {
+  color: white;
+  display: block;
+  float: right;
+  font-size: 10px;
+}
+.top .wrap .top-r .top-r2 i {
+  float: left;
+  margin-right: 15px;
+  color: lightcoral;
+}
+.top .wrap .top-r .top-r2 samp {
+  color: white;
+  display: block;
+  float: right;
+  font-size: 10px;
+}
+.nav {
+  background-color: #b1b1b1;
+  padding: 20px 0;
+}
+.nav .wrap {
+  position: relative;
+  z-index: 9;
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: white;
+  border-radius: 40px;
+}
+.nav .wrap .nav-l li {
+  float: left;
+  margin-right: 30px;
+}
+.nav .wrap .nav-l li a {
+  color: black;
+  text-decoration: none;
+}
+.nav .wrap .nav-l li:nth-child(1) a {
+  color: coral;
+}
+.nav .wrap .nav-r li {
+  float: left;
+  margin-right: 30px;
+}
+.nav .wrap .nav-r li a {
+  color: skyblue;
+}
+.nav .wrap .nav-r li:nth-child(2) a {
+  color: green;
+}
+.nav .wrap .nav-r li:nth-child(3) a {
+  color: coral;
+}
+.bring {
+  background-color: #b1b1b1;
+  padding: 130px 0;
+}
+.bring .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.bring .wrap .bring-m {
+  width: 35%;
+}
+.bring .wrap .bring-m h3 {
+  font-size: 14px;
+  color: coral;
+}
+.bring .wrap .bring-m h5 {
+  font-size: 38px;
+  color: white;
+  font-weight: 500;
+  line-height: 40px;
+}
+.bring .wrap .bring-m p {
+  font-size: 10px;
+  margin-top: 15px;
+  color: white;
+}
+.bring .wrap .bring-m a {
+  margin-top: 40px;
+  color: white;
+  display: inline-block;
+  background-color: crimson;
+  padding: 20px;
+  border-radius: 30px 0 30px 0;
+  font-size: 14px;
+  text-decoration: none;
+}
+.bring .wrap .bring-m a:hover {
+  background-color: #c82333;
+}
+.bring .wrap img {
+  width: 460px;
+  position: absolute;
+  bottom: -130px;
+  right: -100px;
+}
+.kp {
+  padding: 100px 0 50px 0;
+}
+.kp .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.kp .wrap ul {
+  color: white;
+}
+.kp .wrap ul li {
+  background-color: #ed5858;
+  text-align: center;
+  float: left;
+  width: calc(33.333% - 20px);
+  margin: 0 10px;
+  box-sizing: border-box;
+  padding: 0 30px 30px 30px;
+}
+.kp .wrap ul li .kp-i i {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ed5858;
+  width: 50px;
+  padding: 30px ;
+  margin-top: -50px;
+  margin-bottom: 10px;
+  border-radius: 50% 50% 0 0 ;
+}
+.kp .wrap ul li h3 {
+  line-height: 30px;
+  font-size: 18px;
+}
+.kp .wrap ul li p {
+  line-height: 25px;
+  font-size: 10px;
+}
+.kp .wrap ul li:nth-child(2) {
+  background-color: #fdb62f;
+}
+.kp .wrap ul li:nth-child(2) .kp-i i {
+  background-color: #fdb62f;
+}
+.kp .wrap ul li:nth-child(3) {
+  background-color: #16c3b0;
+}
+.kp .wrap ul li:nth-child(3) .kp-i i {
+  background-color: #16c3b0;
+}
+.fun {
+  background-color: #f6f5f5;
+  padding: 50px 0;
+}
+.fun .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.fun .wrap .fun-l {
+  width: 50%;
+}
+.fun .wrap .fun-l img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.fun .wrap .fun-r {
+  box-sizing: border-box;
+  padding: 0 50px 0 100px;
+  width: 50%;
+}
+.fun .wrap .fun-r h3 {
+  font-style: 14px;
+  color: coral;
+}
+.fun .wrap .fun-r h5 {
+  font-size: 24px;
+}
+.fun .wrap .fun-r p {
+  display: block;
+  margin-top: 15px;
+  line-height: 20px;
+  font-size: 10px;
+}
+.fun .wrap .fun-r a {
+  display: inline-block;
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #ffc107;
+  text-decoration: none;
+  border-radius: 20px 0 20px 0;
+}
+.fun .wrap .fun-r a:hover {
+  background-color: #e0a800;
+}
+.pack {
+  background-color: #17a2b8;
+  padding: 50px 0;
+}
+.pack .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pack .wrap h3 {
+  font-size: 18px;
+  color: coral;
+}
+.pack .wrap h5 {
+  font-size: 28px;
+  color: white;
+}
+.pack .wrap ul {
+  margin-top: 50px;
+}
+.pack .wrap ul li {
+  width: calc(33.333% - 20px);
+  float: left;
+  margin: 0 10px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 10px;
+}
+.pack .wrap ul li img {
+  width: 80px;
+  height: 80px;
+}
+.pack .wrap ul li h3 {
+  display: block;
+  margin: 20px 0;
+  color: #2cc5bd;
+}
+.pack .wrap ul li p {
+  line-height: 25px;
+  font-size: 10px;
+}
+.pack .wrap ul li a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #dc3545;
+  border-radius: 30px 0 30px 0;
+  color: white;
+  text-decoration: none;
+}
+.pack .wrap ul li a:hover {
+  color: white;
+  background-color: #c82333;
+}
+.pack .wrap ul li:nth-child(2) h3 {
+  color: #71bc60;
+}
+.pack .wrap ul li:nth-child(2) a {
+  background-color: #ffc107;
+  color: black;
+}
+.pack .wrap ul li:nth-child(2) a:hover {
+  background-color: #e0a800;
+}
+.pack .wrap ul li:nth-child(3) h3 {
+  color: #de3545;
+}
+.pack .wrap ul li:nth-child(3) a {
+  background-color: #71bc42;
+  color: black;
+}
+.pack .wrap ul li:nth-child(3) a:hover {
+  color: white;
+  background-color: #60a038;
+}
+.pric {
+  padding: 50px 0;
+}
+.pric .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pric .wrap .pric-l {
+  width: calc(33.33% - 20px);
+  margin: 0 10px;
+}
+.pric .wrap .pric-l h3 {
+  font-size: 14px;
+  color: coral;
+}
+.pric .wrap .pric-l h5 {
+  display: block;
+  margin: 15px 0;
+  font-size: 28px;
+}
+.pric .wrap .pric-l p {
+  font-style: 10px;
+}
+.pric .wrap .pric-r {
+  width: 66.66%;
+}
+.pric .wrap .pric-r .pricing1 {
+  width: calc(50% - 20px);
+  margin: 0 10px;
+}
+.pric .wrap .pric-r .pricing1 .pr-1 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: #16c3b0;
+  border-radius: 50%;
+}
+.pric .wrap .pric-r .pricing1 .pr-1 samp {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  display: inline-block;
+  border: 4px solid white;
+  border-radius: 50%;
+  width: 66px;
+  line-height: 66px;
+  font-size: 24px;
+  text-align: center;
+}
+.pric .wrap .pric-r .pricing1 h4 {
+  display: block;
+  margin: 30px 0;
+  font-size: 22px;
+}
+.pric .wrap .pric-r .pricing1 ul li {
+  margin: 16px 0;
+}
+.pric .wrap .pric-r .pricing1 ul li i {
+  color: #16c3b0;
+  margin-right: 20px;
+}
+.pric .wrap .pric-r .pricing1 a {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 15px 25px;
+  border-radius: 35px 0 35px 0;
+  text-decoration: none;
+  color: black;
+  background-color: #16c3b0;
+}
+.pric .wrap .pric-r .pricing1:nth-child(2) .pr-1 {
+  background-color: #fd4d40;
+}
+.pric .wrap .pric-r .pricing1:nth-child(2) ul li i {
+  color: #fd4d40;
+}
+.pric .wrap .pric-r .pricing1:nth-child(2) a {
+  color: white;
+  background-color: #fd4d40;
+}
+.what {
+  background-color: #f6f5f5;
+  padding: 50px 0;
+}
+.what .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.what .wrap h3 {
+  font-size: 18px;
+  color: coral;
+}
+.what .wrap h5 {
+  display: block;
+  margin: 20px 0;
+  font-size: 28px;
+}
+.what .wrap .card {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #fd4d40;
+  box-sizing: border-box;
+  padding: 15px;
+  text-align: left;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+.what .wrap .card img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 30px;
+  margin-bottom: 100px;
+}
+.what .wrap .card h3 {
+  color: white;
+}
+.what .wrap .card .c-p1 {
+  display: block;
+  margin: 10px 0 20px 0;
+  color: #d0caca;
+}
+.what .wrap .card .c-p2 {
+  font-size: 10px;
+}
+.what .wrap ul {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.what .wrap ul li {
+  width: 25%;
+  float: left;
+}
+.what .wrap ul li h6 {
+  font-size: 28px;
+  color: #16c3b0;
+}
+.what .wrap ul li p {
+  line-height: 55px;
+  font-size: 14px;
+}
+.what .wrap ul li:nth-child(2) h6 {
+  color: #fdb62f;
+}
+.what .wrap ul li:nth-child(3) h6 {
+  color: #71bc42;
+}
+.what .wrap ul li:nth-child(4) h6 {
+  color: #dc3545;
+}
+.t {
+  background-color: #ffc107;
+  padding: 30px;
+}
+.t .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  color: white;
+}
+.t .wrap samp {
+  float: left;
+  font-size: 28px;
+}
+.t .wrap a {
+  display: inline-block;
+  float: right;
+  padding: 10px 30px;
+  background-color: #dc3545;
+  border-radius: 20px 0 20px 0;
+  color: white;
+  text-decoration: none;
+}
+.t .wrap a:hover {
+  background-color: #c82333;
+}
+.bot {
+  background-color: #343a40;
+  color: white;
+  padding: 50px 0;
+}
+.bot .wrap1 {
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #494e53;
+}
+.bot .wrap1 .bot-l {
+  width: 50%;
+}
+.bot .wrap1 .bot-l h3 {
+  display: block;
+  margin-bottom: 20px;
+  color: #dc3545;
+  font-size: 20px;
+}
+.bot .wrap1 .bot-l p {
+  font-style: 10px;
+  line-height: 30px;
+}
+.bot .wrap1 .bot-l h4 {
+  display: block;
+  margin: 40px 0 20px 0;
+  color: #dc3545;
+}
+.bot .wrap1 .bot-l .bot-l-b input.b-in {
+  display: block;
+  height: 50px;
+  width: 300px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.bot .wrap1 .bot-l .bot-l-b input.b-ing {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  padding: 15px 20px;
+  background-color: #de3545;
+}
+.bot .wrap1 .bot-l .bot-l-b input.b-ing:hover {
+  background-color: #c82333;
+}
+.bot .wrap1 .bot-r {
+  width: 50%;
+}
+.bot .wrap1 .bot-r ul {
+  width: 50%;
+}
+.bot .wrap1 .bot-r ul h3 {
+  display: block;
+  margin-bottom: 30px;
+  color: #de3545;
+}
+.bot .wrap1 .bot-r ul li {
+  margin: 15px 0;
+}
+.bot .wrap1 .bot-r ul li a {
+  color: #c8c1c1;
+  text-decoration: none;
+}
+.bot .wrap1 .bot-r ul li a:hover {
+  color: white;
+}
+.bot .wrap2 {
+  padding: 50px 0;
+}
+.bot .wrap2 h5 {
+  text-align: center;
+  color: white;
+}
+/*# sourceMappingURL=./02周考试.css.map */

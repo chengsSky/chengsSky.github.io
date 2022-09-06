@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>时间</title>
+
+  <link rel="stylesheet" href="/css/time.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="clock">
+    <div class="flip">
+      <div class="digital front" data-number="0"></div>
+      <div class="digital back" data-number="1"></div>
+    </div>
+    <div class="flip">
+      <div class="digital front" data-number="0"></div>
+      <div class="digital back" data-number="1"></div>
+    </div>
+    <em class="divider">:</em>
+    <div class="flip">
+      <div class="digital front" data-number="0"></div>
+      <div class="digital back" data-number="1"></div>
+    </div>
+    <div class="flip">
+      <div class="digital front" data-number="0"></div>
+      <div class="digital back" data-number="1"></div>
+    </div>
+    <em class="divider">:</em>
+    <div class="flip">
+      <div class="digital front" data-number="0"></div>
+      <div class="digital back" data-number="1"></div>
+    </div>
+    <div class="flip">
+      <div class="digital front" data-number="0"></div>
+      <div class="digital back" data-number="1"></div>
+    </div>
+  </div>
+
+  <script src="./time.js"></script>
+  <script>
+    $("body").mouseover(function (e) {
+      // console.log($);
+      var x = e.pageX;
+      var y = e.pageY;
+      var wid = document.documentElement.clientWidth;
+      var hei = document.documentElement.clientHeight;
+
+      x = x - (wid / 2);
+      y = y - (hei / 2);
+
+      console.log(x, y);
+
+      $(".clock").css(
+
+      )
+    });
+    document.body.onmousemove = function (event) {
+      var x = (event.pageX - window.innerWidth / 2) * (45 / (window.innerWidth / 2)) + 50 + "%";
+      var y = (event.pageY - window.innerHeight / 2) * (45 / (window.innerHeight / 2)) + 50 + "%";
+      document.body.style.perspectiveOrigin = x + " " + y;
+    };
+  </script>
+
+</body>
+
+</html>

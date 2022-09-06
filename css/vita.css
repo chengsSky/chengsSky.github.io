@@ -114,7 +114,7 @@ body {
   flex-wrap: wrap;
 }
 .works .works-min .works-card {
-  width: 45%;
+  width: 30%;
 }
 .works .works-min .works-card img {
   display: block;
@@ -126,5 +126,6 @@ body {
 }
 .works .works-min .works-card p {
   text-align: center;
+  color: #ff0000;
 }
 /*# sourceMappingURL=./vita.css.map */

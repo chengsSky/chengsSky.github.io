@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="never">
+  <link rel="stylesheet" href="../css/chengs.css">
+  <link rel="stylesheet" href="../css/cartoon.css">
+  <title>b站漫画</title>
+</head>
+
+<body>
+  <div class="tc">
+    <div class="tc-m">提材</div>
+    <div class="tc-s">
+      <div class="tc-1" id="-1">全部</div>
+      <div class="tc-2" id="999">热血</div>
+      <div class="tc-3" id="997">古风</div>
+      <div class="tc-4" id="1016">玄幻</div>
+      <div class="tc-5" id="998">奇幻</div>
+      <div class="tc-6" id="1023">悬疑</div>
+      <div class="tc-7" id="1002">都市</div>
+      <div class="tc-8" id="1096">历史</div>
+      <div class="tc-9" id="1092">武侠仙侠</div>
+      <div class="tc-10" id="1088">游戏竞技</div>
+      <div class="tc-11" id="1081">悬疑灵异</div>
+      <div class="tc-12" id="1063">架空</div>
+      <div class="tc-13" id="1060">青春</div>
+      <div class="tc-14" id="1054">西幻</div>
+      <div class="tc-15" id="1048">现代</div>
+      <div class="tc-16" id="1028">正能量</div>
+      <div class="tc-17" id="1015">科幻</div>
+    </div>
+  </div>
+  <div class="dq">
+    <div class="dq-m">地区</div>
+    <div class="dq-s">
+      <div class="dq-1" id="-1">全部</div>
+      <div class="dq-2" id="1">大陆</div>
+      <div class="dq-3" id="2">日本</div>
+      <div class="dq-4" id="6">韩国</div>
+      <div class="dq-5" id="5">其他</div>
+    </div>
+  </div>
+  <div class="jd">
+    <div class="jd-m">进度</div>
+    <div class="jd-s">
+      <div class="jd1" id="-1">全部</div>
+      <div class="jd2" id="0">连载</div>
+      <div class="jd3" id="1">完结</div>
+    </div>
+  </div>
+  <div class="sf">
+    <div class="sf-m">收费</div>
+    <div class="sf-s">
+      <div class="sf-1" id="-1">全部</div>
+      <div class="sf-2" id="1">免费</div>
+      <div class="sf-3" id="2">付费</div>
+      <div class="sf-4" id="3">等就免费</div>
+    </div>
+  </div>
+  <div class="px">
+    <div class="px-m">排序</div>
+    <div class="px-s">
+      <div class="px-1" id="0">人气推荐</div>
+      <div class="px-2" id="1">更新时间</div>
+      <div class="px-3" id="2">追漫人数</div>
+      <div class="px-4" id="3">上架时间</div>
+    </div>
+  </div>
+
+  <div class="box">
+    <img src="" alt="">
+  </div>
+
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    var tcxxx = -1;
+    var dqxxx = -1;
+    var jdxxx = -1;
+    var sfxxx = -1;
+    var pxxxx = -1;
+
+    var tcs = document.querySelector(".tc-s");
+    tcs.addEventListener('click', function (e) {
+      var tcy = e.target.className;
+      // console.log($(tcy));
+      // $(tcy);
+      tcxxx = e.target.id;
+      console.log("tcxxx", tcxxx);
+      yyy();
+    });
+
+    var dqs = document.querySelector(".dq-s");
+    dqs.addEventListener('click', function (e) {
+      dqxxx = e.target.id
+      console.log("dqxxx", dqxxx);
+      yyy();
+    });
+
+    var jds = document.querySelector(".jd-s");
+    jds.addEventListener('click', function (e) {
+      jdxxx = e.target.id
+      console.log("jdxxx", jdxxx);
+      yyy();
+    });
+
+    var sfs = document.querySelector(".sf-s");
+    sfs.addEventListener('click', function (e) {
+      sfxxx = e.target.id
+      console.log("sfxxx", sfxxx);
+      yyy();
+    });
+
+    var pxs = document.querySelector(".px-s");
+    pxs.addEventListener('click', function (e) {
+      pxxxx = e.target.id
+      console.log("pxxxx", pxxxx);
+      yyy();
+    });
+  </script>
+
+
+  <script>
+    function getJSON(url, callback) {
+      console.log(url);
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            callback(JSON.parse(xhr.response));
+          } else {
+            console.log("完成了 但是失败了", xhr.status);
+          }
+        }
+      };
+      xhr.open("GET", url, true);
+      xhr.send();
+    }
+
+    function yyy() {
+      getJSON(
+        "https://apis.netstart.cn/bcomic/ClassPage?styleId=" + tcxxx + "&areaId=" + dqxxx + "&isFinish=" + jdxxx +
+        "&order=" + pxxxx + "&pageNum=1&pageSize=39&isFree=" + sfxxx + "",
+        function (res) {
+          document.querySelector(".box").innerHTML = "";
+
+          res.data.forEach(function (e) {
+
+            var liNode = document.createElement("div");
+
+            liNode.innerHTML = '<div><img src="' + e.vertical_cover + '" alt=""><div class = "box-p" > ' + e
+              .title + '</div> < /div > ';
+            document.querySelector(".box").appendChild(liNode);
+          });
+        });
+    }
+    yyy();
+  </script>
+</body>
+
+</html>

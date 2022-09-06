@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多种手风琴效果整合</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/accordion.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">手风琴0</div>
+        <!--w-accor0-->
+        <div class="w-accor w-accor0" id="Accor0">
+            <ul class="swiper-wrapper clearfix">
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                if ($(window).width() > 640) {
+                    accor($('#Accor0'), '40%', 500, true,
+                        false
+                        ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false）
+                } else {
+                    var swiper = new Swiper('#Accor0', {
+                        effect: 'slide',
+                        loop: true,
+                        speed: 300,
+                        autoplay: {
+                            delay: 3000, //展示时间
+                            disableOnInteraction: false
+                        }
+                    });
+                }
+            });
+        </script>
+        <!--w-accor0 end-->
+        <div class="title">手风琴1</div>
+        <!--w-accor1-->
+        <div class="w-accor w-accor1" id="Accor1">
+            <ul class="swiper-wrapper clearfix">
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                if ($(window).width() > 640) {
+                    accor($('#Accor1'), '40%', 500, false,
+                        false
+                        ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false）
+                } else {
+                    var swiper = new Swiper('#Accor1', {
+                        effect: 'slide',
+                        loop: true,
+                        speed: 300,
+                        autoplay: {
+                            delay: 3000, //展示时间
+                            disableOnInteraction: false
+                        }
+                    });
+                }
+            });
+        </script>
+        <!--w-accor1 end-->
+        <div class="title">手风琴2</div>
+        <!--w-accor2-->
+        <div class="w-accor w-accor2" id="Accor2">
+            <ul class="clearfix">
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                        <div class="cont_ar">
+                            <div class="i_img"><img src="/picture/xzku.png" /></div>
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文述文字描述文字描字描述文字描述文字描述文字描述
+                                </div>
+                            </div>
+                        </div>
+                    </div><a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                        <div class="cont_ar">
+                            <div class="i_img"><img src="/picture/xzku.png" /></div>
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文述文字描述文字描字描述文字描述文字描述文字描述
+                                </div>
+                            </div>
+                        </div>
+                    </div><a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                        <div class="cont_ar">
+                            <div class="i_img"><img src="/picture/xzku.png" /></div>
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文述文字描述文字描字描述文字描述文字描述文字描述
+                                </div>
+                            </div>
+                        </div>
+                    </div><a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                        <div class="cont_ar">
+                            <div class="i_img"><img src="/picture/xzku.png" /></div>
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文述文字描述文字描字描述文字描述文字描述文字描述
+                                </div>
+                            </div>
+                        </div>
+                    </div><a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                        <div class="cont_ar">
+                            <div class="i_img"><img src="/picture/xzku.png" /></div>
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文述文字描述文字描字描述文字描述文字描述文字描述
+                                </div>
+                            </div>
+                        </div>
+                    </div><a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                accor($('#Accor2'), '50%', 500, false,
+                    false
+                    ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false） 
+            });
+        </script>
+        <!--w-accor2 end-->
+        <div class="title">手风琴3</div>
+        <!--w-accor3-->
+        <div class="w-accor w-accor3" id="Accor3">
+            <ul class="clearfix">
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                        <div class="cont_ar">
+                            <div class="left_ar">
+                                <h3>小标题标题</h3>
+                            </div>
+                            <div class="right_ar">
+                                <div class="dec_ar">
+                                    <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                    <div class="acr_p">
+                                        文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                        <div class="cont_ar">
+                            <div class="left_ar">
+                                <h3>小标题标题</h3>
+                            </div>
+                            <div class="right_ar">
+                                <div class="dec_ar">
+                                    <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                    <div class="acr_p">
+                                        文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                        <div class="cont_ar">
+                            <div class="left_ar">
+                                <h3>小标题标题</h3>
+                            </div>
+                            <div class="right_ar">
+                                <div class="dec_ar">
+                                    <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                    <div class="acr_p">
+                                        文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                        <div class="cont_ar">
+                            <div class="left_ar">
+                                <h3>小标题标题</h3>
+                            </div>
+                            <div class="right_ar">
+                                <div class="dec_ar">
+                                    <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                    <div class="acr_p">
+                                        文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                        <div class="cont_ar">
+                            <div class="left_ar">
+                                <h3>小标题标题</h3>
+                            </div>
+                            <div class="right_ar">
+                                <div class="dec_ar">
+                                    <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                    <div class="acr_p">
+                                        文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                accor($('#Accor3'), '50%', 500, true,
+                    true
+                    ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false） 
+            });
+        </script>
+        <!--w-accor3 end-->
+        <div class="title">手风琴4</div>
+        <!--w-accor4-->
+        <div class="w-accor w-accor4" id="Accor4">
+            <ul class="clearfix">
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                        <div class="cont_ar">
+                            <h3>小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                        <div class="cont_ar">
+                            <h3>小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="i_img"><img src="/picture/xzku2.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                        <div class="cont_ar">
+                            <h3>小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                        <div class="cont_ar">
+                            <h3>小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="i_img"><img src="/picture/xzku2.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                        <div class="cont_ar">
+                            <h3>小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                accor($('#Accor4'), '50%', 500, false,
+                    false
+                    ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false） 
+            });
+        </script>
+        <!--w-accor4 end-->
+        <div class="title">手风琴5</div>
+        <!--w-accor5-->
+        <div class="w-accor w-accor5" id="Accor5">
+            <ul class="clearfix">
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="i_img"><img src="/picture/xzku2.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="i_img"><img src="/picture/xzku2.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                        <div class="cont_ar">
+                            <div class="dec_ar">
+                                <h3>小标题标题</h3>
+                                <div class="i_img"><img src="/picture/xzku.png" /></div>
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                accor($('#Accor5'), '600', 500, false,
+                    false
+                    ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false）
+            });
+        </script>
+        <!--w-accor5 end-->
+        <div class="title">手风琴6</div>
+        <!--w-accor6-->
+        <div class="w-accor w-accor6" id="Accor6">
+            <ul class="clearfix">
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b1.png" /></div>
+                        <div class="cont_ar">
+                            <h3 class="h_1">小标题标题</h3>
+                            <h3 class="h_2">小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b2.png" /></div>
+                        <div class="cont_ar">
+                            <h3 class="h_1">小标题标题</h3>
+                            <h3 class="h_2">小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b3.png" /></div>
+                        <div class="cont_ar">
+                            <h3 class="h_1">小标题标题</h3>
+                            <h3 class="h_2">小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b4.png" /></div>
+                        <div class="cont_ar">
+                            <h3 class="h_1">小标题标题</h3>
+                            <h3 class="h_2">小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="/picture/b5.png" /></div>
+                        <div class="cont_ar">
+                            <h3 class="h_1">小标题标题</h3>
+                            <h3 class="h_2">小标题标题</h3>
+                            <div class="dec_ar">
+                                <div class="acr_p">
+                                    文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                accor($('#Accor6'), '50%', 500, false,
+                    false
+                    ); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false）
+            });
+        </script>
+        <!--w-accor6 end-->
+    </div>
+    <script src="accordion.js"></script>
+    <!--手机-->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <script src="./swiper.min.js"></script>
+</body>
