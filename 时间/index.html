@@ -60,9 +60,10 @@
       )
     });
     document.body.onmousemove = function (event) {
-      var x = (event.pageX - window.innerWidth / 2) * (45 / (window.innerWidth / 2)) + 50 + "%";
-      var y = (event.pageY - window.innerHeight / 2) * (45 / (window.innerHeight / 2)) + 50 + "%";
-      document.body.style.perspectiveOrigin = x + " " + y;
+      var x = (event.pageX - window.innerWidth / 2) * (25 / (window.innerWidth / 2));
+      var y = (event.pageY - window.innerHeight / 2) * (25 / (window.innerHeight / 2));
+      $(".clock").css("transform", "rotateX(" + x + "deg) rotateY(" + y + "deg)")
+      console.log(x, y);
     };
   </script>
 

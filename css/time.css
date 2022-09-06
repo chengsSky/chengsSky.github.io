@@ -10,7 +10,6 @@ body {
 
 .clock {
   transform-style: preserve-3d;
-  transform: rotateY(0deg);
   display: flex;
 }
 .clock .divider {
