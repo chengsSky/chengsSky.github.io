@@ -28,13 +28,21 @@
                 <li>学校: 广东工商大学</li>
               </ul>
               <ul>
-                <li>手机: 13686797801</li>
+                <!-- <li>手机: 13686797801</li> -->
                 <li>微信: cheng--dl</li>
                 <li>邮箱: 1829773818@qq.com</li>
               </ul>
             </div>
             <div class="vita-min-r">
             </div>
+          </div>
+        </section>
+        <section class="peanuts">
+          <div class="box">
+            <div class="big"></div>
+          </div>
+          <div class="box">
+            <div class="big"></div>
           </div>
         </section>
         <section class="skill">
@@ -99,7 +107,23 @@
             </a>
             <a href="/拖拽/" class="works-card">
               <img src="/picture/拖拽.png" alt="">
-              <p>手风琴</p>
+              <p>拖拽</p>
+            </a>
+            <a href="/搜索框动画/" class="works-card">
+              <img src="/picture/搜索框动画.png" alt="">
+              <p>搜索框动画</p>
+            </a>
+            <a href="/记忆卡片/" class="works-card">
+              <img src="/picture/记忆卡片.png" alt="">
+              <p>记忆卡片</p>
+            </a>
+            <a href="/别踩白块/" class="works-card">
+              <img src="/picture/别踩白块.png" alt="">
+              <p>别踩白块</p>
+            </a>
+            <a href="/360浏览器/" class="works-card">
+              <img src="/picture/360浏览器.png" alt="">
+              <p>360浏览器</p>
             </a>
           </div>
         </section>
@@ -120,6 +144,17 @@
       $(this).find("i").addClass("spins");
       $(this).find("i").removeClass("spin");
     })
+
+
+    document.body.onmousemove = function (event) {
+      var x = (event.pageX - window.innerWidth / 2) * (-5 / (window.innerWidth / 2)) + "px";
+      var y = (event.pageY - window.innerHeight / 2) * (5 / (window.innerHeight / 2)) + "px";
+      $(".big").css({
+        "top": y,
+        "right": x
+      })
+      console.log(x, y);
+    };
   </script>
 </body>
 

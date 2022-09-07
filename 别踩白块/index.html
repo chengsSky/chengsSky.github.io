@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>别踩白块</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .stage {
+      width: 100%;
+      max-width: 580px;
+      height: 100vh;
+      background-color: #fff;
+      background-size: 100% auto;
+    }
+
+    .stage .main {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 400px;
+      height: 100%;
+    }
+
+    .stage .main i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90px;
+      height: 90px;
+      background-color: #000;
+      background-position: 0px 0px;
+      background-position: -181px -75px;
+      background-size: 545px;
+    }
+
+    .stage .main i.played {
+      background-color: #fff;
+      background-size: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .stage .over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 0, 0);
+      display: none;
+    }
+
+    .score {
+      display: flex;
+      position: relative;
+      z-index: 999;
+      justify-content: center;
+      top: 20px;
+      pointer-events: none;
+    }
+
+    .num {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 28px;
+      height: 35px;
+      background-image: url("/picture/score.png");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+
+    /* 每个分数的精灵图位置 */
+    .num0 {
+      background-position-x: 0;
+    }
+
+    .num1 {
+      background-position-x: -28px;
+    }
+
+    .num2 {
+      background-position-x: -56px;
+    }
+
+    .num3 {
+      background-position-x: -84px;
+    }
+
+    .num4 {
+      background-position-x: -112px;
+    }
+
+    .num5 {
+      background-position-x: -140px;
+    }
+
+    .num6 {
+      background-position-x: -168px;
+    }
+
+    .num7 {
+      background-position-x: -196px;
+    }
+
+    .num8 {
+      background-position-x: -224px;
+    }
+
+    .num9 {
+      background-position-x: -252px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stage">
+    <section class="main"></section>
+    <section class="over">over</section>
+
+    <section class="score">
+      <i class="num num0"></i>
+    </section>
+  </div>
+  <script>
+    var mainEl = document.querySelector(".stage .main");
+    var overEl = document.querySelector(".stage .over");
+    var scoreEl = document.querySelector(".stage .score");
+    var music = [
+      [
+        25, 21, 22, 23, 24, 25, 21, 21, 26, 24, 25, 26, 27, 31, 21, 21, 24, 25, 24, 23, 22, 23, 24, 23, 22, 21, 17,
+        21, 22, 23, 21, 22, 25, 21, 22, 23, 24, 25, 21, 21, 26, 24, 25, 26, 27, 31, 21, 21, 24, 25, 24, 23, 22, 23,
+        24, 23, 22, 21, 22, 23, 22, 21, 17, 21,
+      ],
+      [
+        23, 22, 21, 17, 16, 15, 16, 17, 21, 17, 16, 15, 14, 13, 14, 12, 21, 17, 21, 11, 7, 15, 12, 13, 11, 21, 17, 16,
+        17, 23, 25, 26, 24, 23, 22, 24, 24, 23, 21, 17, 16, 15, 14, 13, 12, 14, 13, 12, 11, 12, 13, 14, 15, 12, 15,
+        14, 13, 16, 15, 14, 15, 14, 13, 12, 11, 6, 16, 17, 21, 17, 16, 15, 14, 13, 12, 16, 15, 16, 15, 14, 13, 23, 22,
+        21, 22, 21, 23, 22, 24, 25, 23, 24, 25, 23, 24, 25, 15, 16, 17, 21, 22, 23, 24, 23, 21, 22, 23, 13, 14, 15,
+        16, 15, 14, 15, 13, 14, 15, 14, 16, 15, 14, 13, 12, 13, 12, 11, 12, 13, 14, 15, 16, 14, 16, 15, 16, 17, 21,
+        15, 16, 17, 21, 22, 23, 24, 25, 23, 21, 22, 23, 22, 21, 22, 17, 21, 22, 23, 22, 21, 17, 21, 16, 17, 21, 11,
+        12, 13, 14, 13, 12, 13, 21, 17, 21, 16, 21, 17, 16, 15, 14, 15, 14, 13, 14, 15, 16, 17, 11, 16, 21, 17, 21,
+        17, 16, 17, 21, 22, 21, 17, 21, 16, 17, 23, 13, 14, 13, 12, 22, 23, 22, 21, 13, 11, 16, 15, 5, 4, 5, 6, 16,
+        17, 16, 17, 5, 4, 5, 6, 16, 15, 16, 17, 17, 16, 17, 11, 21, 22, 21, 17, 7, 11, 7, 6, 16, 15, 16, 17, 7, 13,
+        12, 11, 21, 22, 24, 23, 13, 15, 23, 21, 24, 23, 24, 22, 15, 14, 15, 13, 21, 17, 21, 13, 15, 15, 16, 17, 15,
+        13, 21, 22, 23, 21, 23, 23, 22, 21, 17, 16, 16, 15, 16, 17, 21, 23, 22, 21, 23,
+      ],
+    ];
+    var puzi = music[Math.floor(Math.random() * music.length)];
+    mainEl.onclick = function () {
+      console.log("点错了");
+      var x = Math.floor(event.clientX / 90);
+      var firstLtClick = dots.find(function (dot) {
+        return dot.y * 90 < event.clientY;
+      });
+      y = firstLtClick ? firstLtClick.y : dots[0].y;
+      console.log(x, y);
+      var
+        node = document.createElement("div");
+      node.style.width = "90px";
+      node.style.height = "90px";
+      node.style.position = "absolute";
+      node.style.top = y * 90 + "px";
+      node.style.left = x * 90 + "px";
+      node.style.backgroundColor = "blue";
+      mainEl.appendChild(node);
+      clearInterval(id);
+      overEl.style.display = "block";
+    };
+    var
+      dots = [];
+    var score = 0;
+    var speed = 0.01;
+
+    function Dot(y) {
+      this.x = Math.floor(Math.random() * 4);
+      this.y = y;
+      this.node = document.createElement("i");
+      this.updateView();
+      mainEl.appendChild(this.node);
+      var _this = this;
+      this.node.onclick = function () {
+        firstUnPlayed = dots.filter(function (dot) {
+          return !dot.played;
+        })[0];
+
+        if (this.isSameNode(firstUnPlayed.node)) {
+          _this.node.classList.add("played");
+          _this.played = true;
+          event.stopPropagation();
+          var node = document.createElement("audio");
+          node.src = "./music/sound_" + _this.music + ".mp3";
+          node.play();
+          score++;
+          if (score % 10 === 0) {
+            speed += 0.001;
+          }
+          scoreEl.innerHTML = "";
+          String(score).split("").forEach(function (n) {
+            var node = document.createElement("i");
+            node.classList.add("num");
+            node.classList.add("num" + n);
+            scoreEl.appendChild(node);
+          });
+        }
+      };
+    }
+    Dot.prototype.move = function () {
+      this.y += speed;
+    };
+    Dot.prototype.updateView = function () {
+      this.node.style.left = this.x * 90 + "px";
+      this.node.style.top = this.y * 90 + "px";
+    };
+
+    function init() {
+      for (var i = 4; i > 0; i--) {
+        var d = new Dot(i - 1);
+        var tmp = puzi.shift();
+        puzi.push(tmp);
+        d.music = tmp;
+        dots.push(d);
+      }
+    }
+    init();
+    var id = setInterval(function () {
+      dots.forEach(function (dot) {
+        dot.move();
+        dot.updateView();
+      });
+
+      if (dots[dots.length - 1].y >= 0) {
+        var d = new Dot(-1);
+
+        var tmp = puzi.shift();
+        puzi.push(tmp);
+        d.music = tmp;
+        dots.push(d);
+      }
+      var firstUnPlayed = dots.filter(function (dot) {
+        return !dot.played;
+      })[0];
+      if (firstUnPlayed && (firstUnPlayed.y + 1) * 90 >= 640) {
+        clearInterval(id);
+        overEl.style.display = "block";
+      }
+      var firstPlayed = dots.filter(function (dot) {
+        return dot.played;
+      })[0];
+      if (firstPlayed && firstPlayed.y * 90 > 640) {
+        mainEl.removeChild(firstPlayed.node);
+        dots.splice(dots.indexOf(firstPlayed), 1);
+      }
+    }, 40);
+  </script>
+</body>
+
+</html>

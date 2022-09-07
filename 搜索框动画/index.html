@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/chengs.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <title>搜索框动画</title>
+</head>
+
+<body>
+  <form id="content">
+    <input type="text" name="input" class="input" id="search-input">
+    <button type="reset" class="search" id="search-btn"></button>
+    <ul id="ulEl"></ul>
+  </form>
+  <script>
+    const input = document.getElementById("search-input");
+    const searchBtn = document.getElementById("search-btn");
+
+    const expand = () => {
+      document.querySelector('#ulEl').innerHTML = "";
+      searchBtn.classList.toggle("close");
+      input.classList.toggle("square");
+    };
+
+    searchBtn.addEventListener("click", expand);
+  </script>
+  <script src="./jsonp.js"></script>
+</body>
+
+</html>

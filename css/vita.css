@@ -128,4 +128,32 @@ body {
   text-align: center;
   color: #ff0000;
 }
+.peanuts {
+  position: fixed;
+  left: 10px;
+  bottom: 0px;
+  width: 100px;
+  height: 300px;
+  background-color: skyblue;
+  border-radius: 50px 50px 0 0;
+  padding: 30px 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.peanuts .box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+}
+.peanuts .box .big {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  z-index: 9;
+}
 /*# sourceMappingURL=./vita.css.map */

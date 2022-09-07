@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360浏览器</title>
+  <link rel="stylesheet" href="/css/chengs.css">
+  <link rel="stylesheet" href="/css/360browser.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js.map"> </script>
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  </style>
+
+</head>
+
+<body>
+  <div class="headera">
+    <div class="headercontant">
+      <img src="/picture/360img/title.png" alt="">
+      <span class="lianjie">
+        <a href="">论坛</a>
+        <a href="">扩展</a>
+        <a href="">Mac版</a>
+      </span>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <section class="header">
+            <div class="header-m">
+              <h2>畅快浏览 极致体验</h2>
+              <p>全新Chrome内核浏览器，性能更强，速度更快</p>
+              <div class="header-b">
+                <button class="header-b-l">32位版本</button>
+                <button class="header-b-r">
+                  <img src="/picture/360img/wind.png" alt="">64位版本<samp>NEW</samp></button>
+              </div>
+              <div class="header-q1">
+                <img src="/picture/360img/青月.png" alt="">
+              </div>
+              <div class="header-q2">
+                <img src="/picture/360img/红月.png" alt="">
+              </div>
+              <div class="header-q3">
+                <img src="/picture/360img/卫星.png" alt="">
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="content"> -->
+            <video src="/picture/360img/星球渐变.mp4" autoplay loop muted></video>
+            <div class="content-m">
+              <h2>极速</h2>
+              <div class="content-m-y"></div>
+              <h3>全新Chromium内核</h3>
+              <h4>性能强劲，快如闪电</h4>
+              <button>立即体验</button>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="jiku">
+            <video src="/picture/360img/窗口.mp4" autoplay loop muted></video>
+            <div class="content-m">
+              <h2>极酷</h2>
+              <div class="content-m-y"></div>
+              <h3>暗夜炫黑模式</h3>
+              <h4>定义酷,定义你</h4>
+              <button>立即体验</button>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="yaos">
+            <video src="/picture/360img/钥匙孔.mp4" autoplay loop muted></video>
+            <div class="content-m">
+              <h2>极安全</h2>
+              <div class="content-m-y"></div>
+              <h3>DNS加密防劫持</h3>
+              <h4>安全升级,肆意无忌</h4>
+              <button>立即体验</button>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="jiguang">
+            <video src="/picture/360img/北极.mp4" autoplay loop muted></video>
+            <div class="content-m">
+              <h2>极视界</h2>
+              <div class="content-m-y"></div>
+              <h3>4K高清视频播放</h3>
+              <h4>还原真实之美,尽显万物本色</h4>
+              <button>立即体验</button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
