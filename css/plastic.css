@@ -62,7 +62,7 @@
   }
 }
 .header {
-  background-image: url(/picture/zhengxing/hero-bg.jpg);
+  background-image: url(../picture/zhengxing/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -192,7 +192,7 @@
 }
 .Consultation .container .consultation-r .consultation-r-r {
   height: 262px;
-  background-image: url(/picture/zhengxing/consultation-video.jpg);
+  background-image: url(../picture/zhengxing/consultation-video.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -235,7 +235,7 @@
   margin: 0 0 15px 0;
 }
 .f {
-  background-image: url(/picture/zhengxing/services-bg.jpg);
+  background-image: url(../picture/zhengxing/services-bg.jpg);
   background-position: center;
   background-size: cover;
   padding: 50px 0;
@@ -363,37 +363,37 @@
   display: none;
 }
 .gallery .gallery-left ul li:nth-child(1) {
-  background-image: url(/picture/zhengxing/gallery-1.jpg);
+  background-image: url(../picture/zhengxing/gallery-1.jpg);
 }
 .gallery .gallery-left ul li:nth-child(1):hover > div {
   display: block;
 }
 .gallery .gallery-left ul li:nth-child(2) {
-  background-image: url(/picture/zhengxing/gallery-2.jpg);
+  background-image: url(../picture/zhengxing/gallery-2.jpg);
 }
 .gallery .gallery-left ul li:nth-child(2):hover > div {
   display: block;
 }
 .gallery .gallery-left ul li:nth-child(3) {
-  background-image: url(/picture/zhengxing/gallery-3.jpg);
+  background-image: url(../picture/zhengxing/gallery-3.jpg);
 }
 .gallery .gallery-left ul li:nth-child(3):hover > div {
   display: block;
 }
 .gallery .gallery-left ul li:nth-child(4) {
-  background-image: url(/picture/zhengxing/gallery-5.jpg);
+  background-image: url(../picture/zhengxing/gallery-5.jpg);
 }
 .gallery .gallery-left ul li:nth-child(4):hover > div {
   display: block;
 }
 .gallery .gallery-left ul li:nth-child(5) {
-  background-image: url(/picture/zhengxing/gallery-6.jpg);
+  background-image: url(../picture/zhengxing/gallery-6.jpg);
 }
 .gallery .gallery-left ul li:nth-child(5):hover > div {
   display: block;
 }
 .gallery .gallery-left ul li:nth-child(6) {
-  background-image: url(/picture/zhengxing/gallery-7.jpg);
+  background-image: url(../picture/zhengxing/gallery-7.jpg);
 }
 .gallery .gallery-left ul li:nth-child(6):hover > div {
   display: block;
@@ -402,7 +402,7 @@
   height: 620px;
   width: 25%;
   float: right;
-  background-image: url(/picture/zhengxing/gallery-4.jpg);
+  background-image: url(../picture/zhengxing/gallery-4.jpg);
   background-size: cover;
   background-position: center top;
   position: relative;

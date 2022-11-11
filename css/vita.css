@@ -22,7 +22,7 @@
 }
 body {
   width: 100%;
-  background-image: url(/picture/背景.webp);
+  background-image: url(../picture/backdrop.webp);
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
@@ -109,7 +109,7 @@ body {
 }
 .works .works-min {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
